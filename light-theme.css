@@ -7,3 +7,12 @@
     border: 2px solid rgb(0, 119, 182);
     box-shadow: 0 0 10px 5px rgba(2, 62, 138, 0.85);
 }
+
+.separator {
+    border: 2px solid #023E8A;
+    border-radius: 1rem;
+}
+
+.card p {
+    background-color: rgba(246, 241, 232, 0.86);
+}

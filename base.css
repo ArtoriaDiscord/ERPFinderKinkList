@@ -23,6 +23,13 @@ h1, h2 {
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
     border-radius: 1rem;
     padding: 10px;
+}
+
+.card p {
+    border-radius: 1rem;
+    flex-grow: 1;
 }
