@@ -16,3 +16,7 @@
 .card p {
     background-color: rgba(9, 14, 23, 0.86);
 }
+
+.btn-back svg path, .btn-forward svg path {
+    fill: #415A77;
+}

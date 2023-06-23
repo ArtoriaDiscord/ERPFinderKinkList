@@ -29,4 +29,7 @@
         width: 36px;
         height: 36px;
     }
+    .btn-back, .btn-forward {
+        display: none;
+    }
 }
