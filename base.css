@@ -27,6 +27,7 @@ h1, h2 {
     flex-direction: column;
     border-radius: 1rem;
     padding: 10px;
+    cursor: pointer;
 }
 
 .card p {
