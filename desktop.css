@@ -21,4 +21,12 @@
     .sep-wrap {
         margin: 0.5rem 0;
     }
+    .theme-btn {
+        width: 48px;
+        height: 48px;
+    }
+    .theme-btn img {
+        width: 48px;
+        height: 48px;
+    }
 }

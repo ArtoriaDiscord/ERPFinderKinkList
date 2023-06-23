@@ -5,6 +5,7 @@
     font-family: 'Raleway', 'Bahnschrift Light', sans-serif;
     font-size: 18px;
     font-weight: 200;
+    border: 0;
 }
 
 h1, h2 {
@@ -14,6 +15,23 @@ h1, h2 {
 
 .header_wrap {
     margin: 5vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_wrap h1 {
+    text-align: center;
+}
+
+.theme-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.theme-btn img {
+    cursor: pointer;
 }
 
 .deck {
