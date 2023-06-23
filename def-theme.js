@@ -17,10 +17,10 @@ document.addEventListener('DOMContentLoaded', function() {
 function applyTheme() {
     let themeStylesheet = document.getElementById('themeStylesheet');
     if (localStorage.getItem("theme") === "dark") {
-        btn.src = 'service_res/sun.png'
+        btn.src = 'service_res/sun.svg'
         themeStylesheet.href = 'dark-theme.css';
     } else {
-        btn.src = 'service_res/moon.png'
+        btn.src = 'service_res/moon.svg'
         themeStylesheet.href = 'light-theme.css';
     }
 }
@@ -28,11 +28,11 @@ function applyTheme() {
 function changeTheme() {
     let themeStylesheet = document.getElementById('themeStylesheet');
     if (localStorage.getItem("theme") === "dark") {
-        btn.src = 'service_res/moon.png'
+        btn.src = 'service_res/moon.svg'
         themeStylesheet.href = 'light-theme.css';
         localStorage.setItem("theme", "light")
     } else {
-        btn.src = 'service_res/sun.png'
+        btn.src = 'service_res/sun.svg'
         themeStylesheet.href = 'dark-theme.css';
         localStorage.setItem("theme", "dark")
     }
