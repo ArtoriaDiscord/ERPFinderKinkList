@@ -9,6 +9,7 @@
         width: 500px;
         min-height: 75vh;
         margin: 1rem;
+        z-index: 100;
     }
     .card img {
         width: 100%;
@@ -35,6 +36,17 @@
     .btn-back, .btn-forward  {
         width: 96px;
         height: 96px;
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .btn-back {
+        left: 1rem;
+    }
+
+    .btn-forward {
+        right: 1rem;
     }
 
     .btn-back svg, .btn-forward svg {
