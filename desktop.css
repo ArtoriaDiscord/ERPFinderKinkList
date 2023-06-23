@@ -24,9 +24,11 @@
     .theme-btn {
         width: 48px;
         height: 48px;
+        margin: 0.5vh 0.5vh 0 0;
     }
     .theme-btn img {
         width: 48px;
         height: 48px;
+        margin: 0.5vh 0.5vh 0 0;
     }
 }

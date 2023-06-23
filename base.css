@@ -6,11 +6,13 @@
     font-size: 18px;
     font-weight: 200;
     border: 0;
+    transition: background-color 0.5s ease;
 }
 
 h1, h2 {
     text-align: center;
     letter-spacing: 0.25rem;
+    transition: color 0.5s ease, background-color 0.5s ease;
 }
 
 .header_wrap {
@@ -25,12 +27,14 @@ h1, h2 {
 }
 
 .theme-btn {
+    z-index: 100;
     position: absolute;
     top: 0;
     right: 0;
 }
 
 .theme-btn img {
+    z-index: 100;
     cursor: pointer;
 }
 
@@ -51,4 +55,5 @@ h1, h2 {
 .card p {
     border-radius: 1rem;
     flex-grow: 1;
+    transition: color 0.5s ease, background-color 0.5s ease;
 }
