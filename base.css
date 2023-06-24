@@ -52,10 +52,12 @@ h1, h2 {
     right: 0;
     z-index: 2;
     width: 100%;
+    background: transparent;
 }
 
 .github-btn {
     flex-grow: 1;
+    background: transparent;
 }
 
 .theme-btn img {
