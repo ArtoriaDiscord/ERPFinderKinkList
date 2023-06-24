@@ -50,8 +50,14 @@
     }
 
     .btn-back svg, .btn-forward svg {
-        width: 96px;
-        height: 96px;
+        width: 48px;
+        height: 48px;
         cursor: pointer;
+    }
+
+    .header-btn-wrap svg {
+        width: 48px;
+        height: 48px;
+        margin: 0.5vh 0.5vh 0 0;
     }
 }

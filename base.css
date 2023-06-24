@@ -35,23 +35,33 @@ h1, h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
-.header_wrap h1 {
+.header-wrap h1 {
     text-align: center;
 }
 
-.theme-btn {
-    z-index: 100;
+.header-btn-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 2;
+    width: 100%;
+}
+
+.github-btn {
+    flex-grow: 1;
 }
 
 .theme-btn img {
-    z-index: 100;
     cursor: pointer;
 }
+
 
 .deck {
     display: flex;
@@ -65,11 +75,19 @@ h1, h2 {
     flex-direction: column;
     border-radius: 1rem;
     padding: 10px;
-    cursor: pointer;
 }
 
 .card p {
     border-radius: 1rem;
     flex-grow: 1;
     transition: color 0.5s ease, background-color 0.5s ease;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }

@@ -32,4 +32,14 @@
     .btn-back, .btn-forward {
         display: none;
     }
+    .btn-back svg, .btn-forward svg {
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+    }
+
+    .header-btn-wrap svg {
+        width: 36px;
+        height: 36px;
+    }
 }

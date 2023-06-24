@@ -20,3 +20,7 @@
 .btn-back svg path, .btn-forward svg path {
     fill: #415A77;
 }
+
+.header-btn-wrap svg path {
+    fill: #fff;
+}

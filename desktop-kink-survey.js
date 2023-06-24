@@ -16,15 +16,15 @@ function like_kink() {
     setTimeout(function() {
         card.style.transform = ""
         card.innerHTML = `
-                <h2>Header ${deck_counter}</h2>
+                <h2 class="unselectable">Header ${deck_counter}</h2>
                 <div class="sep-wrap">
                     <hr class="separator">
                 </div>
-                <img src="res/${deck_counter}.jpg">
+                <img draggable="false" src="res/${deck_counter}.jpg">
                 <div class="sep-wrap">
                     <hr class="separator">
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <p class="unselectable">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Aenean ullamcorper magna non est egestas egestas.
                     Duis elementum ut diam nec ornare.
                     In semper consectetur est a malesuada.</p>
@@ -44,15 +44,15 @@ function dislike_kink() {
     setTimeout(function() {
         card.style.transform = ""
         card.innerHTML = `
-                <h2>Header ${deck_counter}</h2>
+                <h2  class="unselectable">Header ${deck_counter}</h2>
                 <div class="sep-wrap">
                     <hr class="separator">
                 </div>
-                <img src="res/${deck_counter}.jpg">
+                <img src="res/${deck_counter}.jpg" draggable="false">
                 <div class="sep-wrap">
                     <hr class="separator">
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <p  class="unselectable">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Aenean ullamcorper magna non est egestas egestas.
                     Duis elementum ut diam nec ornare.
                     In semper consectetur est a malesuada.</p>
