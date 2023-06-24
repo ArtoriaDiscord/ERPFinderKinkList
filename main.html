@@ -5,6 +5,7 @@
         <link rel="stylesheet" type="text/css" href="base.css">
         <link rel="stylesheet" type="text/css" href="desktop.css">
         <link rel="stylesheet" type="text/css" href="mobile.css">
+        <link rel="stylesheet" type="text/css" href="modal.css">
         <link id="themeStylesheet" rel="stylesheet" type="text/css" href="dark-theme.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +15,7 @@
         <script src="def-theme.js"></script>
         <script src="desktop-kink-survey.js"></script>
 <!--        <script src="test.js"></script>-->
+        <script src="modal-first-notification.js"></script>
     </head>
     <body>
         <header>
@@ -41,6 +43,30 @@
                 <h1 class="unselectable">Kink list by ERPFinder Inc.</h1>
             </div>
         </header>
+        <div class="modal-background">
+            <div class="modal-container">
+                <div class="modal-window">
+                    <p class="modal-msg">
+                        Добро пожаловать на сайт для определения ваших предпочтений, для вашей вероятно первой анкеты.<br><br>
+                        Здесь собраны самые часто встречающиеся, предпочтения.<br><br>
+                        Если это соответствует вашим предпочтениям (кинкам), необходимо: <br><br>
+                        Компьютер: Нажать на стрелочку вправо.<br>
+                        Телефон: Свайпнуть вправо карточку.<br><br>
+                        Если нет повторить все те же действия для соответствуещего устройства, только в этот раз влево.<br><br>
+                        Желаем вам успехов в ваших начинаниях!<br><br>
+                        © ERPFinder Inc. 2023
+                    </p>
+                    <button class="ok-modal">
+                        <svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                             viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
+                            <path d="M40.267,14.628L20.974,33.921l-9.293-9.293c-0.391-0.391-1.023-0.391-1.414,0s-0.391,1.023,0,1.414l10,10
+                                c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l20-20c0.391-0.391,0.391-1.023,0-1.414S40.657,14.237,40.267,14.628z
+                                "/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
         <div class="deck">
             <button class="btn-back">
                 <svg fill="#000000" height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -55,7 +81,7 @@
                 <div class="sep-wrap">
                     <hr class="separator">
                 </div>
-                <img src="res/1.jpg" draggable="false">
+                <img src="res/1.jpg" draggable="false" alt="card_image">
                 <div class="sep-wrap">
                     <hr class="separator">
                 </div>

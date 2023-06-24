@@ -16,3 +16,21 @@
 .card p {
     background-color: rgba(246, 241, 232, 0.86);
 }
+
+.modal-container {
+    border: 1px solid #778DA9;
+    border-radius: 16px;
+}
+
+.modal-container {
+    border: 2px solid rgb(0, 119, 182);
+    border-radius: 16px;
+}
+
+.ok-modal svg {
+    border: 2px solid rgb(65, 90, 119);
+}
+
+.modal-msg {
+    background-color: rgba(246, 241, 232, 0.86);
+}

@@ -60,4 +60,23 @@
         height: 48px;
         margin: 0.5vh 0.5vh 0 0;
     }
+
+    .modal-container {
+        width: 500px;
+        height: 500px;
+    }
+
+    .ok-modal svg {
+        width: 96px;
+        height: 48px;
+    }
+
+    .modal-msg {
+       margin: 10px;
+       padding: 10px;
+    }
+    
+    .modal-window, .ok-modal{
+        border-radius: 16px;
+    }
 }

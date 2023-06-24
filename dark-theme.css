@@ -24,3 +24,17 @@
 .header-btn-wrap svg path {
     fill: #fff;
 }
+
+.modal-container {
+    border: 2px solid rgb(65, 90, 119);
+    border-radius: 16px;
+}
+
+.ok-modal svg {
+    border: 2px solid rgb(65, 90, 119);
+    fill: #fff;
+}
+
+.modal-msg {
+    background-color: rgba(9, 14, 23, 0.86);
+}
