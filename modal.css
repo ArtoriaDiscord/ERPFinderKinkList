@@ -20,8 +20,6 @@
     display: flex;
     flex-direction: column;
     justify-items: center;
-    height: 100%;
-    width: 100%;
 }
 
 .ok-modal svg {
