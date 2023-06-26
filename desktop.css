@@ -66,6 +66,10 @@
         height: 500px;
     }
 
+    .modal-window {
+        height: 100%;
+    }
+
     .ok-modal svg {
         width: 96px;
         height: 48px;
