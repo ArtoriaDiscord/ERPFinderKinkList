@@ -54,7 +54,7 @@ function generate_new_card() {
 
 function handleTouchStart(event) {
     initialX = event.touches[0].clientX;
-    card.style.transition = `transform 0s ease`;
+    card.style.transition = `transform 0.12s ease`;
 }
 
 function handleTouchMove(event) {
