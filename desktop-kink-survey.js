@@ -61,6 +61,9 @@ function handleTouchMove(event) {
         return;
     }
     currentX = event.touches[0].clientX;
+    const diffX = currentX - initialX;
+
+    card.style.transform = `translateX(${diffX}px)`;
 }
 
 function handleTouchEnd() {
