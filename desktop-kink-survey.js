@@ -19,6 +19,8 @@ function like_kink() {
     setTimeout(function() {
         generate_new_card()
     }, 1000);
+
+    card.style.transition = ``;
 }
 
 function dislike_kink() {
@@ -28,6 +30,8 @@ function dislike_kink() {
     setTimeout(function() {
         generate_new_card()
     }, 1000);
+
+    card.style.transition = ``;
 }
 
 function generate_new_card() {
