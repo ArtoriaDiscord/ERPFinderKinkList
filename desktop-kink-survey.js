@@ -19,8 +19,6 @@ function like_kink() {
     setTimeout(function() {
         generate_new_card()
     }, 1000);
-
-    card.style.transition = ``;
 }
 
 function dislike_kink() {
@@ -28,10 +26,8 @@ function dislike_kink() {
     card.style.transition = `transform 1s ease`;
 
     setTimeout(function() {
-        generate_new_card()
+        generate_new_card();
     }, 1000);
-
-    card.style.transition = ``;
 }
 
 function generate_new_card() {
@@ -58,6 +54,7 @@ function generate_new_card() {
 
 function handleTouchStart(event) {
     initialX = event.touches[0].clientX;
+    card.style.transition = `transform 0s ease`;
 }
 
 function handleTouchMove(event) {
