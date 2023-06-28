@@ -9,7 +9,7 @@
     transition: background-color 0.5s ease;
 }
 
-html {
+html, body {
     overflow-x: hidden;
 }
 

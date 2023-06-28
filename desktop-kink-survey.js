@@ -37,7 +37,7 @@ function generate_new_card() {
                 <div class="sep-wrap">
                     <hr class="separator">
                 </div>
-                <img src="res/${deck_counter}.jpg" draggable="false">
+                <img src="res/${deck_counter}.jpg" draggable="false" alt="card-img">
                 <div class="sep-wrap">
                     <hr class="separator">
                 </div>
@@ -60,7 +60,6 @@ function handleTouchMove(event) {
     if (initialX === null) {
         return;
     }
-
     currentX = event.touches[0].clientX;
 }
 
@@ -71,17 +70,12 @@ function handleTouchEnd() {
 
         if (Math.abs(diffX) > threshold) {
             if (diffX < 0) {
-                console.log('Swipe left');
                 dislike_kink()
             } else {
-                console.log('Swipe right');
                 like_kink()
             }
         } else {
             card.style.transform = 'translateX(0)';
         }
     }
-
-    initialX = null;
-    currentX = null;
 }
