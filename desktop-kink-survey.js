@@ -1,6 +1,12 @@
 let card = null
 let deck_counter = 1
 
+if (localStorage.getItem('deck_counter') != null) {
+    deck_counter = localStorage.getItem('deck_counter')
+}
+
+let tags_list = []
+
 document.addEventListener('DOMContentLoaded', function() {
     card = document.querySelector(".card")
     const dislike_btn = document.querySelector(".btn-back")
@@ -10,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     card.addEventListener('touchstart', handleTouchStart);
     card.addEventListener('touchmove', handleTouchMove);
     card.addEventListener('touchend', handleTouchEnd);
-    generate_new_card();
+    generate_card();
 });
 
 function like_kink() {
@@ -18,8 +24,10 @@ function like_kink() {
     card.style.transition = `transform 1s ease`;
 
     setTimeout(function() {
-        generate_new_card()
+        generate_card()
     }, 1000);
+    tags_list.push(true)
+    next_card()
 }
 
 function dislike_kink() {
@@ -27,11 +35,13 @@ function dislike_kink() {
     card.style.transition = `transform 1s ease`;
 
     setTimeout(function() {
-        generate_new_card();
+        generate_card();
     }, 1000);
+    tags_list.push(false)
+    next_card()
 }
 
-function generate_new_card() {
+function generate_card() {
     card.style.transform = ""
     card.innerHTML = `
                 <h2  class="unselectable">Header ${deck_counter}</h2>
@@ -47,10 +57,15 @@ function generate_new_card() {
                     Duis elementum ut diam nec ornare.
                     In semper consectetur est a malesuada.</p>
     `
+    console.log(tags_list)
+}
+
+function next_card() {
     deck_counter++;
     if (deck_counter > 4) {
         deck_counter = 1;
     }
+    localStorage.setItem('deck_counter', deck_counter)
 }
 
 function handleTouchStart(event) {
