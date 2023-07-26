@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     card.addEventListener('touchstart', handleTouchStart);
     card.addEventListener('touchmove', handleTouchMove);
     card.addEventListener('touchend', handleTouchEnd);
+    generate_new_card();
 });
 
 function like_kink() {
@@ -37,7 +38,7 @@ function generate_new_card() {
                 <div class="sep-wrap">
                     <hr class="separator">
                 </div>
-                <img src="res/${deck_counter}.jpg" draggable="false" alt="card-img">
+                <img src="res/${deck_counter}" draggable="false" alt="card-img">
                 <div class="sep-wrap">
                     <hr class="separator">
                 </div>
