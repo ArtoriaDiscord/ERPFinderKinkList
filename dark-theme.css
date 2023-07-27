@@ -25,16 +25,16 @@
     fill: #fff;
 }
 
-.modal-container {
+.modal-container, .modal-result-container {
     border: 2px solid rgb(65, 90, 119);
     border-radius: 16px;
 }
 
-.ok-modal svg {
+.ok-modal svg, .ok-result-modal svg {
     border: 2px solid rgb(65, 90, 119);
     fill: #fff;
 }
 
-.modal-msg {
+.modal-msg, .modal-result-msg {
     background-color: rgba(9, 14, 23, 0.86);
 }

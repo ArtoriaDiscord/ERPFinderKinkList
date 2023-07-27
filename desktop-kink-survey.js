@@ -1,11 +1,13 @@
 let card = null
-let deck_counter = 1
+let deck_counter = 0
 
-if (localStorage.getItem('deck_counter') != null) {
-    deck_counter = localStorage.getItem('deck_counter')
+if (localStorage.getItem('deck_counter') !== null) {
+    deck_counter = parseInt(localStorage.getItem('deck_counter'))
 }
-
 let tags_list = []
+if (localStorage.getItem('tags_list') !== null && localStorage.getItem('tags_list') !== '') {
+    tags_list = localStorage.getItem('tags_list').split(',')
+}
 
 document.addEventListener('DOMContentLoaded', function() {
     card = document.querySelector(".card")
@@ -16,6 +18,9 @@ document.addEventListener('DOMContentLoaded', function() {
     card.addEventListener('touchstart', handleTouchStart);
     card.addEventListener('touchmove', handleTouchMove);
     card.addEventListener('touchend', handleTouchEnd);
+    for (let i = 0; i < NAME_TAGS.length; i++) {
+        NAME_TAGS[i] = caesarDecrypt(NAME_TAGS[i])
+    }
     generate_card();
 });
 
@@ -26,7 +31,7 @@ function like_kink() {
     setTimeout(function() {
         generate_card()
     }, 1000);
-    tags_list.push(true)
+    tags_list.push('true')
     next_card()
 }
 
@@ -37,14 +42,14 @@ function dislike_kink() {
     setTimeout(function() {
         generate_card();
     }, 1000);
-    tags_list.push(false)
+    tags_list.push('false')
     next_card()
 }
 
 function generate_card() {
     card.style.transform = ""
     card.innerHTML = `
-                <h2  class="unselectable">Header ${deck_counter}</h2>
+                <h2  class="unselectable">${NAME_TAGS[deck_counter]}</h2>
                 <div class="sep-wrap">
                     <hr class="separator">
                 </div>
@@ -57,14 +62,17 @@ function generate_card() {
                     Duis elementum ut diam nec ornare.
                     In semper consectetur est a malesuada.</p>
     `
-    console.log(tags_list)
 }
 
 function next_card() {
     deck_counter++;
-    if (deck_counter > 4) {
-        deck_counter = 1;
+    if (deck_counter > NAME_TAGS.length - 1) {
+        deck_counter = 0;
     }
+    if (deck_counter === 0) {
+        finish_survey()
+    }
+    localStorage.setItem('tags_list', tags_list)
     localStorage.setItem('deck_counter', deck_counter)
 }
 

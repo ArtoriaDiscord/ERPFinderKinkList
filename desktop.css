@@ -5,6 +5,9 @@
     h2 {
         font-size: 2.5rem;
     }
+    h3 {
+        font-size: 2rem;
+    }
     .card {
         width: 500px;
         min-height: 75vh;
@@ -67,21 +70,26 @@
         height: 500px;
     }
 
-    .modal-window {
+    .modal-window, .modal-result-window{
         height: 100%;
     }
 
-    .ok-modal svg {
+    .ok-modal svg, .ok-result-modal svg {
         width: 96px;
         height: 48px;
     }
 
-    .modal-msg {
+    .modal-msg, .modal-result-msg {
        margin: 10px;
        padding: 10px;
     }
     
-    .modal-window, .ok-modal{
+    .modal-window, .ok-modal, .modal-result-window, .ok-result-modal{
         border-radius: 16px;
+    }
+
+    .modal-result-container {
+        width: 500px;
+        height: 250px;
     }
 }

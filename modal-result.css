@@ -1,0 +1,38 @@
+.modal-result-background {
+    position: fixed;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 200;
+}
+
+.modal-result-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-result-window {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.ok-result-modal svg {
+    cursor: pointer;
+}
+
+.modal-result-msg {
+    flex-grow: 1;
+    border-radius: 16px;
+}
+
+.modal-result-container h3 {
+    text-align: center;
+    border-radius: 16px;
+}
+
