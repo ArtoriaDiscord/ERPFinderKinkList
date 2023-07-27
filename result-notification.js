@@ -49,19 +49,11 @@ function copy_modal()  {
     alert('Скопировано!')
 }
 
-function copyStringToClipboard(text) {
-    // Создаем временный элемент textarea
-    var tempTextarea = document.createElement("textarea");
-    tempTextarea.value = text;
-    document.body.appendChild(tempTextarea);
-
-    // Выделяем текст во временном элементе textarea
-    tempTextarea.select();
-    tempTextarea.setSelectionRange(0, 99999); // Для поддержки мобильных устройств
-
-    // Выполняем команду копирования
-    document.execCommand('copy');
-
-    // Удаляем временный элемент textarea
-    document.body.removeChild(tempTextarea);
+async function copyStringToClipboard(text) {
+    try {
+        await navigator.clipboard.writeText(text);
+        console.log("Текст скопирован в буфер обмена: " + text);
+    } catch (err) {
+        console.error("Не удалось скопировать текст: ", err);
+    }
 }
