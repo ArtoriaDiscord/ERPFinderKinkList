@@ -19,7 +19,7 @@ function finish_survey() {
     localStorage.setItem("IsFinished", "true")
     modal_result_window.style.display = "";
     let ifFirst = false;
-    let result_str = '';
+    result_str = '';
     for (let i = 0; i < tags_list.length; i++) {
         if(tags_list[i] === 'true') {
             if(ifFirst === false) {
@@ -45,5 +45,23 @@ function copy_modal()  {
     modal_result_window.style.display = "none"
     tags_list = []
     localStorage.setItem('tags_list', '')
+    copyStringToClipboard(result_str);
     alert('Скопировано!')
+}
+
+function copyStringToClipboard(text) {
+    // Создаем временный элемент textarea
+    var tempTextarea = document.createElement("textarea");
+    tempTextarea.value = text;
+    document.body.appendChild(tempTextarea);
+
+    // Выделяем текст во временном элементе textarea
+    tempTextarea.select();
+    tempTextarea.setSelectionRange(0, 99999); // Для поддержки мобильных устройств
+
+    // Выполняем команду копирования
+    document.execCommand('copy');
+
+    // Удаляем временный элемент textarea
+    document.body.removeChild(tempTextarea);
 }
