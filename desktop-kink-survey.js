@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     card.addEventListener('touchend', handleTouchEnd);
     for (let i = 0; i < NAME_TAGS.length; i++) {
         NAME_TAGS[i] = caesarDecrypt(NAME_TAGS[i])
+        TAGS_DESCRIPTION[i] = caesarDecrypt(TAGS_DESCRIPTION[i])
     }
     generate_card();
 });
@@ -57,10 +58,7 @@ function generate_card() {
                 <div class="sep-wrap">
                     <hr class="separator">
                 </div>
-                <p  class="unselectable">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aenean ullamcorper magna non est egestas egestas.
-                    Duis elementum ut diam nec ornare.
-                    In semper consectetur est a malesuada.</p>
+                <p  class="unselectable">${TAGS_DESCRIPTION[deck_counter]}</p>
     `
 }
 
