@@ -52,13 +52,10 @@ function copy_modal()  {
 function copyStringToClipboard() {
     const textarea = document.createElement("textarea");
     textarea.value = result_str;
-
     textarea.style.position = "absolute";
     textarea.style.left = "-9999px";
-
     document.body.appendChild(textarea);
     textarea.select();
-
     try {
         document.execCommand("copy");
     } catch (err) {
