@@ -1,12 +1,13 @@
 let modal_result_status = localStorage.getItem("IsFinished")
 let modal_result_window = null
 let modal_result_btn = null
+let modal_result_text = null
 
 document.addEventListener("DOMContentLoaded", function() {
     modal_result_window = document.querySelector(".modal-result-background")
     modal_result_btn = document.querySelector(".ok-result-modal")
-    modal_result_btn.addEventListener("click", copy_modal)
     modal_result_text = document.getElementsByClassName('modal-result-msg')[0]
+    modal_result_btn.addEventListener("click", copy_modal)
     if (modal_result_status === 'true') {
         finish_survey()
     }
@@ -45,15 +46,25 @@ function copy_modal()  {
     modal_result_window.style.display = "none"
     tags_list = []
     localStorage.setItem('tags_list', '')
-    copyStringToClipboard(result_str);
-    alert('Скопировано!')
+    copyStringToClipboard();
 }
 
-async function copyStringToClipboard(text) {
+function copyStringToClipboard() {
+    const textarea = document.createElement("textarea");
+    textarea.value = result_str;
+    
+    textarea.style.position = "absolute";
+    textarea.style.left = "-9999px";
+
+    document.body.appendChild(textarea);
+    textarea.select();
+
     try {
-        await navigator.clipboard.writeText(text);
-        console.log("Текст скопирован в буфер обмена: " + text);
+        const successful = document.execCommand("copy");
+        const message = successful ? "Скопировано в буфер обмена!" : "Не удалось скопировать.";
+        alert(message);
     } catch (err) {
-        console.error("Не удалось скопировать текст: ", err);
+        console.error("Ошибка при копировании: ", err);
     }
+    document.body.removeChild(textarea);
 }
