@@ -52,7 +52,7 @@ function copy_modal()  {
 function copyStringToClipboard() {
     const textarea = document.createElement("textarea");
     textarea.value = result_str;
-    
+
     textarea.style.position = "absolute";
     textarea.style.left = "-9999px";
 
@@ -60,9 +60,7 @@ function copyStringToClipboard() {
     textarea.select();
 
     try {
-        const successful = document.execCommand("copy");
-        const message = successful ? "Скопировано в буфер обмена!" : "Не удалось скопировать.";
-        alert(message);
+        document.execCommand("copy");
     } catch (err) {
         console.error("Ошибка при копировании: ", err);
     }
